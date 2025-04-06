@@ -22,6 +22,7 @@ html, body {
     z-index: 1;
     color: white;
     padding: 1rem;
+    word-break: break-word;
   }
 
   .typewriter {
@@ -51,7 +52,15 @@ html, body {
 
   @media (max-width: 600px) {
     .full-text { display: none; }
-    .short-text { display: block; white-space: normal; width: auto; animation: none; border: none; }
+    .short-text { display: block; }
+    .typewriter {
+      animation: none;
+      border: none;
+      white-space: normal;
+      width: auto;
+      overflow-wrap: break-word;
+      font-size: 1.0rem; /* optional: Schrift verkleinern */
+    }
   }
 
   
