@@ -32,6 +32,12 @@ html, body {
     animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
     font-family: 'Roboto Mono', monospace;
   }
+
+  h1{
+    font-size: clamp(1.5rem, 5vw, 3rem); /* skaliert je nach Bildschirmgröße */
+  }
+
+  .short-text { display: none; }
   
   @keyframes typing {
     from { width: 0 }
@@ -41,5 +47,13 @@ html, body {
   @keyframes blink {
     50% { border-color: transparent }
   }
+  
+
+  @media (max-width: 600px) {
+    .full-text { display: none; }
+    .short-text { display: block; white-space: normal; width: auto; animation: none; border: none; }
+  }
+
+  
   
   
